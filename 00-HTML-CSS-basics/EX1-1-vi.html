@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Topic 0</title>
+	</head>
+
+	<body>
+		<h1>Sign up!</h1>
+
+		<form>
+			<div>
+				<label>First Name</label>
+				<input type="text" placeholder="First Name" name="First name" required data-validation-required-message="Please enter your name.">
+			</div>
+			<br>
+			<div>
+				<label>Last Name</label>
+				<input type="text" placeholder="Last Name" name="Last name" required data-validation-required-message="Please enter your last name.">
+			</div>
+			<br>
+			<div>
+				<label>Email</label>
+				<input type="email" placeholder="Email" name="email" required data-validation-required-message="Please enter your email.">
+			</div>
+			<br>
+			<div>
+				<label>Birthday</label>
+				<input type="date" placeholder="Birthday" name="birthday" required data-validation-required-message="Please enter your birthday.">
+			</div>
+			<br>
+			<div>
+				<label>Favourite Sport</label>
+				<select id="Sport" name="sport">
+  					<option value="" selected="selected">- Select -</option>
+  					<option value="Tenis">Tenis</option>
+  					<option value="Basketball">Basketball</option>
+ 					<option value="Football">Football</option>
+  					<option value="Other">Other</option>
+				</select>
+			</div>
+			<br>
+			<div>
+				<label>Bio</label>
+				<textarea rows="5" placeholder="Write a small bio" name="bio" required data-validation-required-message="Please enter a message."></textarea>
+			</div>
+			<input type="submit" name="send" value="Send" />
+			<input type="reset" name="reset" value="Reset" />
+		</form>	
+
+
+		
+	</body>
+
+
+</html>
