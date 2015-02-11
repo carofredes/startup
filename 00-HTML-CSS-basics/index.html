@@ -24,7 +24,21 @@
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
+       
+
+        <header class="header">My page</header>
+        <nav class="navigation">Navigation</nav>
+        <section class="content">
+            <section class="content">
+                <header class="header">Section inside a senction</header>
+                <article>This is the article</article>
+                <footer class="footer">Footer inside the sections</footer>
+            </section>
+        </section>
+        <aside class="sidebar">Aside?</aside>
+        <footer class="footer">Footer!</footer>
+
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
@@ -38,17 +52,5 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-
-        <header></header>
-        <nav></nav>
-        <section>
-            <section>
-                <header></header>
-                <article></article>
-                <footer></footer>
-            </section>
-        </section>
-        <aside></aside>
-        <footer></footer>
     </body>
 </html>
