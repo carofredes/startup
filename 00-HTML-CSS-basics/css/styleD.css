@@ -1,0 +1,23 @@
+*{
+	margin: 10px;
+}
+
+#title{
+	float: left;
+	margin-left: 30px;
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.paragraph{
+	float: right;
+margin-top: 10px;
+margin-left: 17.3rem;
+font-size: small;
+
+
+}
+
+.nav{
+	display: block;
+}

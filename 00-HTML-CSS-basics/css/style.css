@@ -5,13 +5,15 @@
   margin: 7px auto;
   padding: 7px;
   max-width: 1100px;
-  background-color: #EAEAAE;
+
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 
 }
-
+body{
+   background-image: url("http://www.torange-es.com/photo/24/13/Fondo-luminoso-para-Navidad-1384438953_75.jpg");
+}
 body>*{
   border-style: double;
 }
