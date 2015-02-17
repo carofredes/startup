@@ -14,8 +14,8 @@
 body{
    background-image: url("http://www.torange-es.com/photo/24/13/Fondo-luminoso-para-Navidad-1384438953_75.jpg");
    background-repeat:no-repeat;
-
-   background-size:cover;
+   background-size: 100%;
+   
 }
 body>*{
   border-style: double;
