@@ -1,9 +1,7 @@
 
 
 body{
-	background-image: url("http://2.bp.blogspot.com/-5Y77kCwJMEg/UjOiB7cqpeI/AAAAAAAALAw/p0V0uZkNcB8/s1600/Descargar+pack+fondos+abstractos++%25288%2529.jpg");
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background-color: #C0C0C0;
 	margin: 10px;
 
 }
@@ -28,24 +26,57 @@ body{
 }
 
 img{
-	width: 300px;
-	height: 200px;
+	width: 100%;
+	display: block;
 }
 
-.hoverS{
-	position: absolute;
+.hoverS {
 	opacity: 0;
-	width: 300px;
-	height: 200px;
+	position: absolute;
+	width: 90%;
+	height: 90%;
 }
 
-.hoverS:hover{
-	text-align: center;
+.hoverS:hover {
 	opacity: 0.5;
 	background-color: #527F76;
+	
 }
 
-.text{
+.text {
 	color: #FFFF00;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	margin: 0px; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media all and (max-width: 699px)  {
+	.text {
+		color: #00FFFF;
+		font-size: 12px;
+	}
+
+
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+	.text {
+		color: #FFFFFF;
+		font-size: 16px;
+	}
+
+
+}
+
+@media all and (min-width: 1001px) {
+
+	.text {
+		color:#000000;
+		font-size: 20px;
+	}
+
 }
 
