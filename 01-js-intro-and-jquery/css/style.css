@@ -6,3 +6,8 @@ section{
 #hiddenS{
 	display: none;
 }
+
+.highlight {
+    color: #FF0397;
+
+}
