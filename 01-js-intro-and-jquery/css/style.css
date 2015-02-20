@@ -1,4 +1,5 @@
 
+
 section{
 	text-align: center;
 }
@@ -10,4 +11,40 @@ section{
 .highlight {
     color: #FF0397;
 
+}
+
+
+article{
+	border-style:solid;
+	float: right;
+	max-width: 50%;
+	margin: 2px;
+
+
+}
+
+h2,span{
+	font-family: Georgia, Verdana, serif;
+	color: #545454;
+	font-size: 15px;
+}
+
+section *{
+	display:inline-block;
+	width:100%
+	
+}
+
+section span{
+	float:left;
+}
+
+section img{
+	width:10em;
+	height:10em;
+}
+
+h1{
+	text-align:center;
+	text-decoration: underline;
 }
