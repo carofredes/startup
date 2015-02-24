@@ -12,3 +12,10 @@ Movie.prototype = {
 		return this.attributes[key];
 	}
 }
+
+var myMovie = new Movie();
+myMovie.set("title","oblivion");
+console.log(myMovie.get("title"));
+myMovie.set("director","Joseph Kosinski");
+var dir = "The director of "+myMovie.get("title")+" is "+myMovie.get("director");
+console.log(dir);
