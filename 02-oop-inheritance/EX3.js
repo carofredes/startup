@@ -1,8 +1,8 @@
-function MovieObserver() {
+function ObserverList() {
   this.observerList = [];
 }
  
-MovieObserver.prototype = {
+ObserverList.prototype = {
 	add:function( obj ){
   		return this.observerList.push( obj );
 	},
@@ -41,17 +41,17 @@ function Observer() {
 
 function Movie() {
 	this.attributes = [];
-	this.observers = new MovieObserver();
+	this.observers = new ObserverList();
 }
 
 Movie.prototype = {
 	play:function(){
-		console.log("PLAY "+this.get("title"));
+		console.log("Now playing "+this.get("title"));
         this.notify("PLAY ");
 	},
 
 	stop:function(){
-		console.log("STOP "+this.get("title"));
+		console.log("Now sttoped  "+this.get("title"));
         this.notify("STOP ");
 	},
 
@@ -62,14 +62,7 @@ Movie.prototype = {
 	get:function(key){
 		return this.attributes[key];
 	},
-
-	notify:function(context){
-		var m_count = this.observers.Count();
-           
-   		for( var i = 0; i < m_count; i++ )
-      this.observers.GetAt(i).Update( context );
-	},
-
+	
 	addObserver :function( observer ){
   		this.observers.add( observer );
 	},
@@ -88,6 +81,8 @@ Movie.prototype = {
 
 
 var myMovie = new Movie();
+var observer = new Observer();
+myMovie.addObserver(observer);
 myMovie.set("title","oblivion");
 console.log(myMovie.get("title"));
 myMovie.set("director","Joseph Kosinski");
@@ -96,6 +91,8 @@ console.log(dir);
 myMovie.play();
 myMovie.stop();
 var myMovie2 = new Movie();
+var observer = new Observer();
+myMovie2.addObserver(observer);
 myMovie2.set("title","Harry");
 myMovie2.play();
 console.log(myMovie2.get("title"));

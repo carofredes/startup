@@ -39,32 +39,17 @@ var movieModule = (function () {
   // privates
   var attributes = [];
   var observers = new ObserverList();
- 
-   function addObserver(observer){
-      observers.add(observer);
-  }
- 
-  function removeObserver(observer){
-      observers.removeAt(observers.indexOf(observer, 0));
-  }
- 
-  function notify(context){
-    var observerCount = observers.count();
-      for(var i=0; i < observerCount; i++){
-        observers.get(i).update(context);
-      }
-  }
-  
+
   // Return an object exposed to the public
   return {
   play:function(){
       console.log("PLAY "+attributes["title"]);
-        notify("PLAY ");
+      this.notify("PLAY ");
   },
 
   stop:function(){
     console.log("STOP "+this.get("title"));
-       notify("STOP ");
+    this.notify("STOP ");
   },
 
   set:function(key,value){
@@ -73,11 +58,24 @@ var movieModule = (function () {
 
   get:function(key){
     return attributes[key];
+  },
+  addObserver:function( observer ){
+    observers.add( observer );
+  },
+  removeObserver:function( observer ){
+    observers.removeAt( observers.indexOf( observer, 0 ) );
+  },
+  notify:function (context) {
+    var observerCount = observers.count();
+      for(var i=0; i < observerCount; i++){
+         observers.get(i).update( context );
+      }
   }
   }
 })();
 
-
+var observer = new Observer();
+movieModule.addObserver(observer);
 movieModule.set("title","oblivion");
 console.log(movieModule.get("title"));
 movieModule.set("director","Joseph Kosinski");
