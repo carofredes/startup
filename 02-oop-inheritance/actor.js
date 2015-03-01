@@ -39,25 +39,18 @@ var movieModule = (function () {
   // privates
   var attributes = [];
   var observers = new ObserverList();
+  attributes.actors = []; 
 
-
-  notify = function (context) {
-    var observerCount = observers.count();
-      for(var i=0; i < observerCount; i++){
-         observers.get(i).update( context );
-      }
-  };
-  
   // Return an object exposed to the public
   return {
   play:function(){
       console.log("PLAY "+attributes["title"]);
-      notify("PLAY ");
+      this.notify("PLAY ");
   },
 
   stop:function(){
     console.log("STOP "+this.get("title"));
-    notify("STOP ");
+    this.notify("STOP ");
   },
 
   set:function(key,value){
@@ -72,9 +65,38 @@ var movieModule = (function () {
   },
   removeObserver:function( observer ){
     observers.removeAt( observers.indexOf( observer, 0 ) );
+  },
+  notify:function (context) {
+    var observerCount = observers.count();
+      for(var i=0; i < observerCount; i++){
+         observers.get(i).update( context );
+      }
+  },
+  addActor : function(actor) {
+    attributes.actors.push(actor);
+  },
+  getActors : function() {
+    var output = [],
+    length = attributes.actors.length;
+    for (var i = 0; i<length; i++) {
+      output.push(attributes.actors[i].name);
+    }
+    return ("Actors: " +output);
   }
-  }
+}
 })();
+
+var Actor = function(name, age) {
+  var movies = [];
+  this.name = name;
+  this.age = age;
+  this.addMovie = function(movie) {
+    movies.push(movie);
+  }
+  this.getMovies = function() {
+    return movies;
+  }
+}
 
 var observer = new Observer();
 movieModule.addObserver(observer);
@@ -85,3 +107,7 @@ var dir = "The director of "+movieModule.get("title")+" is "+movieModule.get("di
 console.log(dir);
 movieModule.play();
 movieModule.stop();
+var tom = new Actor("Tom Cruise", 52);
+tom.addMovie("oblivion");
+movieModule.addActor(tom);
+console.log(movieModule.getActors());
