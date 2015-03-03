@@ -23,10 +23,7 @@ movie.prototype ={
 }
  
 
-var test = new movie();
-test.set("title","oblivion");
-console.log(test.get("title"));
-test.play();
+
 
 // export (expose) foo to other modules
 module.export = movie;

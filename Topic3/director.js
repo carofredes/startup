@@ -22,3 +22,10 @@ console.log(dire.getName());
 // export (expose) foo to other modules
 module.export = director;
 
+var movie = require('./movie.js');
+var test = new movie();
+test.set("title","oblivion");
+console.log(test.get("title"));
+test.play();
+dire.addMovie(movie);
+console.log(dire.getName());
