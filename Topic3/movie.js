@@ -26,5 +26,5 @@ movie.prototype ={
 
 
 // export (expose) foo to other modules
-module.export = movie;
+module.exports = movie;
 
