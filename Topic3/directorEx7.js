@@ -2,7 +2,6 @@ var jquery = require('./jquery-2.1.3.js');
 var movie7 = require('./movieEx7.js');
 
 function director7(n){
-    this.movies = [];
     this.name= n;
     this.quotes = [];
 }
@@ -10,12 +9,6 @@ function director7(n){
 
 director7.prototype ={
 		
-    addMovie:function(movie){
-        this.movies.push(movie);
-    },
-    getMovies:function(){
-        return this.movies;
-    },
     getName :function(){
         return this.name;
     },
@@ -35,4 +28,3 @@ var ridleyScott = new director7("Ridley Scott");
 ridleyScott.set(['Cast is everything.', 'Do what ...']);
 alien.set("director", ridleyScott);
 alien.get("director").speak();
-
