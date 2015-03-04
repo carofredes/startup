@@ -1,3 +1,4 @@
+var jquery = require('./jquery-2.1.3.js');
 var movie7 = require('./movieEx7.js');
 
 function director7(n){
@@ -20,6 +21,7 @@ director7.prototype ={
     },
     speak: function(){
         console.log(this.name+" says: "+this.quotes) ;
+     
     },
     set: function(q){
         this.quotes.push(q);
