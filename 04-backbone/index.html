@@ -2,55 +2,38 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-        
         <title>Movies.com</title>
-                    
-        <link rel="" href="">
-        <link href="css/style.css" rel="stylesheet">
-
-	</head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 
 	<body>
-		<div>
-			<table>
-				<tbody>
-					<tr>
-						<td>
-							<img src="">	
-						</td>
-						<td>
-							<h4 > Chappie (2015)</h4>
-                    		<p>
-                                <time >120 min</time>
-                                &nbsp;&nbsp;-&nbsp;&nbsp;
-                                <span >Action</span>
-                                 <span >|</span>
-                                <span >Sci-Fi</span>
-                                 <span >|</span>
-                                <span >Thriller</span>
-                             </p> 
-                             <div >
-								In the near future, crime is patrolled by an oppressive mechanized police force. When one police droid, Chappie, is stolen and given snew programming, he becomes the first robot with the ability to think and feel for himself.                    </div> 
-							<div >
-                        		<h5 >Director:</h5>
-                            	<span >Neill Blomkamp</span>
-                            </div> 
-                    		<div >
-                        		<h5 >Stars:</h5>
-                            	<span > Sharlto Copley</a></span>
-                            	<span > Sharlto Copley</a></span>
-                            	<span > Sharlto Copley</a></span>
-                    		</div> 
-                		</td>
-					</tr>	
-					<tr>
-                		<td>
-							<a href="/video/imdb/vi704556569?ref_=inth_ov_vi" itemprop="trailer"> Watch Trailer</a>                
-						</td>
-            		</tr>
-				</tbody>
-			</table>
-		</div>
+        <script id="movieTemplate" type="text/x-handlebars-template">
+        	
+            <div>
+        		<h4 >{{title}}</h4>
+        		<p>
+                    <time >{{time}}</time>
+                    &nbsp;&nbsp;-&nbsp;&nbsp;
+                    <span >{{genre}}</span>
+                </p> 
+                <div >{{description}}</div> 
+				<div >
+            		<h5 >Director:</h5>
+                	<span >{{director}}</span>
+                </div> 
+        		<div >
+            		<h5 >Stars:</h5>
+                	<span > {{stars}}</a></span>
+                </div> 
+            </div>
+        </script>
+
+    <script type="text/javascript" src="jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="underscore.js"></script>
+    <script type="text/javascript" src="backbone.js"></script>
+    <script type="text/javascript" src="handlebars-v3.0.0.js"></script>
+    <script type="text/javascript" src="template.js"></script>
+
 	</body>
 </html>
 
